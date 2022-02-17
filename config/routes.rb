@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'genres/index'
+    get 'genres/create'
+    get 'genres/edit'
+    get 'genres/update'
+  end
   devise_for :admin, controllers:{
     sessions: 'admin/sessions',
     registrations: 'admin/registrations'
