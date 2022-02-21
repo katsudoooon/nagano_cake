@@ -5,7 +5,9 @@
 <div>
   <% @items.each do |item| %>
     <p>
+      <%= link_to admin_item_path(item.id) do %>
       <%= item.name %>
+      <% end %>
     </p>
   <% end %>
 </div>
