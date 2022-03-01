@@ -1,0 +1,11 @@
+<h1>会員一覧</h1>
+<div>
+  <% @customers.each do |customer| %>
+    <p>
+      <%= link_to admin_customer_path(customer.id) do %>
+        <%= customer.last_name %>
+        <%= customer.first_name %>
+      <% end %>
+    </p>
+  <% end %>
+</div>
