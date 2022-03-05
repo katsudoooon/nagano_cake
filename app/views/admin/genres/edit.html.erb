@@ -1,0 +1,5 @@
+<%= render 'admin/genres/top' %>
+<%= form_with model: @genre,url: admin_genre_path(@genre.id), local:true do |f| %>
+  <p><%= f.text_field :name %></p>
+  <%= f.submit '更新' %>
+<% end %>

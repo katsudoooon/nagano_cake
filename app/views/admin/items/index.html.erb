@@ -1,0 +1,13 @@
+<%= link_to '商品新規登録', new_admin_item_path %>
+
+<h1>商品一覧</h1>
+
+<div>
+  <% @items.each do |item| %>
+    <p>
+      <%= link_to admin_item_path(item.id) do %>
+      <%= item.name %>
+      <% end %>
+    </p>
+  <% end %>
+</div>
